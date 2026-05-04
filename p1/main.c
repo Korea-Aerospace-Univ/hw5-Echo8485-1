@@ -6,11 +6,9 @@ int main() {
 
     int found = 0;
 
-    for (int a = 0; a <= N / 900; a++) {
-        for (int b = 0; b <= N / 750; b++) {
-            if (b % 2 != 0) continue; // b는 짝수
-
-            for (int c = 0; c <= N / 200; c++) {
+    for (int a = 1; a <= N / 900; a++) {   // a는 1부터 시작
+        for (int b = 2; b <= N / 750; b += 2) { // b는 짝수
+            for (int c = 1; c <= N / 200; c++) {
 
                 int total = 900 * a + 750 * b + 200 * c;
 
